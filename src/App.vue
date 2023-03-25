@@ -1,16 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="stopwatchs">
+    <StopWatch></StopWatch>
+    <StopWatch></StopWatch>
+    <StopWatch></StopWatch>
+    <StopWatch></StopWatch>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import StopWatch from './components/StopWatch.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    StopWatch
   }
+
 }
 </script>
 
@@ -22,5 +27,31 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.stopwatchs {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+}
+
+@media screen and (min-width: 320px) {
+  .stopwatchs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .stopwatchs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .stopwatchs {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>
