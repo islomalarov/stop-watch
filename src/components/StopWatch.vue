@@ -102,7 +102,7 @@ export default {
 .stopwatch__block-info {
     border-bottom: 1px solid #9E9E9E;
     color: #9E9E9E;
-    padding: 22px 0 20px 0;
+    padding: 22px 0 20px;
 }
 
 span {
